@@ -1,0 +1,34 @@
+---
+asIndexPage: true
+---
+
+import {
+  Brush,
+  Globe,
+  Zap,
+  Image,
+  Star,
+  Info,
+  Link,
+  FileText
+} from 'lucide-react'
+import { OverviewPage } from '../../../_components'
+
+# All Crops
+
+The following features are configured via the Next.js configuration and are
+available in all themes.
+
+<OverviewPage
+  filePath={metadata.filePath}
+  icons={{
+    FileText,
+    Star,
+    Link,
+    Image,
+    Zap,
+    Globe,
+    Brush,
+    Info
+  }}
+/>
