@@ -1,4 +1,4 @@
-import { useMDXComponents as getMDXComponents } from 'next-mdx-import-source-file'
+import { useMDXComponents as getMDXComponents } from '../../mdx-components'
 import type { PageMapItem } from 'nextra'
 import { Cards } from 'nextra/components'
 import { getIndexPageMap, getPageMap } from 'nextra/page-map'
@@ -28,7 +28,6 @@ export const OverviewPage: FC<{
             )
           }
           return (
-            // @ts-expect-error -- fixme
             <Cards.Card
               key={item.name}
               // @ts-expect-error -- fixme
