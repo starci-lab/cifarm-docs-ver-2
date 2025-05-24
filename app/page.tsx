@@ -17,7 +17,7 @@ const Page = () => {
 
           <div className="pt-4 flex items-center justify-center gap-4">
             <Link 
-              href="/01-getting-started"
+              href="/getting-started"
               className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-200 hover:scale-105 hover:shadow-lg group"
             >
               Get started 
