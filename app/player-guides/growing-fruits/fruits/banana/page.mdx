@@ -4,5 +4,75 @@ description: Learn how to grow bananas in CiFarm
 position: 1
 ---
 
+import { GrowthStages, ToolsTable } from '../../../../_components'
+
 # Banana
+
+> [!NOTE]
+>
+> Regular fruit available at Level 10
+
+## Overview
+
+The Banana is a reliable fruit crop in CiFarm, available to players who have reached Level 10. It offers a good balance of growth time and rewards, making it a popular choice for regular farming.
+
+## Growth Details
+
+- **Price**: 5,000 gold
+- **Sell Price**: 2,500 gold
+- **Young Growth Time**: 12 hours
+- **Mature Growth Time**: 6 hours
+- **Fertilizer Required**: Every 8 hours
+- **Harvest Quantity**: 20 bananas
+- **Experience**: 
+  - Basic: 12 XP
+  - Quality: 24 XP
+
+## Growth Stages
+
+<GrowthStages type="fruit" name="banana" stages={5} />
+
+1. **Seedling** 🌱
+   - Initial planting
+   - Requires fertilizer
+
+2. **Young Growth** 🌿
+   - Development phase
+   - Fertilizer needed every 8 hours
+
+3. **Mature Growth** 🌳
+   - Main growth phase
+   - Can become buggy
+
+4. **Pre-Harvest** 🌸
+   - Final development
+   - Highest bug risk
+
+5. **Harvest Ready** 🍌
+   - Ready for collection
+   - Can yield quality fruits
+
+## Tools Required
+
+<ToolsTable 
+  tools={[
+    {
+      name: "Bug Net",
+      image: "/tools/bug-net.png",
+      description: "Use to treat buggy fruits (Stages 3-4)"
+    },
+    {
+      name: "Fruit Fertilizer",
+      image: "/supplies/fruit-fertilizer.png",
+      description: "Use every 8 hours during growth stages"
+    }
+  ]} 
+/>
+
+## Tips
+
+- Regular fertilization is crucial for optimal growth
+- Watch for bug infestations in mature stages
+- Quality fruits provide double experience
+- Can be sold in the market for profit
 
