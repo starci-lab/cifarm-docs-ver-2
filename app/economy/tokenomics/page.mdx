@@ -1,0 +1,81 @@
+---
+title: 💰 Tokenomics
+description: Learn about CiFarm token distribution and vesting schedule
+---
+
+import { PieChartComponent } from "../../_components"
+
+<div className="max-w-4xl mx-auto px-4 py-8">
+  <h1 className="text-4xl font-bold text-center mb-12">💰 Tokenomics Overview</h1>
+
+    <div>
+        <PieChartComponent />
+    </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+    <div className="overflow-x-auto">
+      <table className="w-full border-collapse">
+        <thead>
+          <tr className="bg-gray-100/10">
+            <th className="p-4 text-left">Category</th>
+            <th className="p-4 text-left">Allocation</th>
+            <th className="p-4 text-left">Vesting Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="border-b border-gray-200/20">
+            <td className="p-4 font-semibold">Airdrop</td>
+            <td className="p-4">30%</td>
+            <td className="p-4">Fully unlocked at TGE</td>
+          </tr>
+          <tr className="border-b border-gray-200/20">
+            <td className="p-4 font-semibold">Liquidity Pool</td>
+            <td className="p-4">25%</td>
+            <td className="p-4">Fully unlocked at TGE</td>
+          </tr>
+          <tr className="border-b border-gray-200/20">
+            <td className="p-4 font-semibold">CEO Listing</td>
+            <td className="p-4">5%</td>
+            <td className="p-4">Locked for 1 month after TGE</td>
+          </tr>
+          <tr className="border-b border-gray-200/20">
+            <td className="p-4 font-semibold">Vault Treasury</td>
+            <td className="p-4">30%</td>
+            <td className="p-4">50% unlocked at TGE, then 5-month cliff for remaining</td>
+          </tr>
+          <tr className="border-b border-gray-200/20">
+            <td className="p-4 font-semibold">Team</td>
+            <td className="p-4">5%</td>
+            <td className="p-4">Locked for 5 months, then unlocks over 1 month cliff</td>
+          </tr>
+          <tr className="border-b border-gray-200/20">
+            <td className="p-4 font-semibold">Marketing</td>
+            <td className="p-4">5%</td>
+            <td className="p-4">Locked for 1 month after TGE</td>
+          </tr>
+          <tr className="border-b border-gray-200/20">
+            <td className="p-4 font-semibold">Early Investors</td>
+            <td className="p-4">10%</td>
+            <td className="p-4">Locked for 3 months, then unlocks with a 1-month cliff</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div className="mt-8 p-6 bg-blue-50/10 rounded-lg">
+    <h2 className="text-2xl font-semibold mb-4">Key Highlights</h2>
+    <ul className="space-y-2">
+      <li>• 55% of tokens are fully unlocked at TGE (Airdrop + Liquidity Pool)</li>
+      <li>• 30% allocated to Vault Treasury for long-term ecosystem development</li>
+      <li>• Team tokens are locked for 5 months to ensure long-term commitment</li>
+      <li>• Early investors have a 3-month lock period with additional cliff</li>
+    </ul>
+  </div>
+
+  <div className="mt-8 p-6 bg-yellow-50/10 rounded-lg">
+    <p className="text-lg">
+      💎 The tokenomics structure is designed to ensure both immediate liquidity and long-term sustainability of the CiFarm ecosystem.
+    </p>
+  </div>
+</div> 

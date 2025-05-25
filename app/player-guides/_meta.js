@@ -5,4 +5,10 @@ export default {
     "energy": {
       title: '⚡Energy'
     },
+    "growing-fruits": {
+      title: '🍎Growing Fruits'
+    },
+    "community": {
+      title: '👥Community'
+    },
   }

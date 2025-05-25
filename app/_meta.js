@@ -11,7 +11,7 @@ export default {
     "economy": {
       title: 'Economy'
     },
-    "season": {
-      title: 'Season'
+    "act": {
+      title: 'Act'
     },
   }
