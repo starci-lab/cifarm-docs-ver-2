@@ -12,6 +12,6 @@ export default {
       title: 'Economy'
     },
     "act": {
-      title: 'Act'
+      title: 'Act 🔥'
     },
   }

@@ -11,4 +11,10 @@ export default {
     "community": {
       title: '👥Community'
     },
+    "pets-animals": {
+      title: '🐮Pets & Animals'
+    },
+    "deliveries": {
+      title: '🚛Deliveries'
+    }
   }
