@@ -1,17 +1,14 @@
 export default {
     index: {
-      title: 'Home page'
+      type: 'page',
+      display: 'hidden'
     },
-    "getting-started": {
-      title: 'Getting Started'
+    docs: {
+      type: 'page',
+      title: "Documentation",
     },
-    "player-guides": {
-      title: 'Player Guides'
-    },
-    "economy": {
-      title: 'Economy'
-    },
-    "act": {
-      title: 'Act 🔥'
+    wiki: {
+      type: 'page',
+      title: "Wiki"
     },
   }

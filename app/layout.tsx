@@ -91,7 +91,7 @@ export default async function RootLayout({ children }) {
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/starci-lab/cifarm-docs-ver-2"
+          docsRepositoryBase="https://github.com/starci-lab/cifarm-docs-ver-2/tree/main"
           sidebar={{ defaultMenuCollapseLevel: 1 }}
           footer={footer}
           editLink="Edit this page on GitHub"
