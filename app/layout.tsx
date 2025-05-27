@@ -1,11 +1,12 @@
 import React from 'react'
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head } from 'nextra/components'
-import { getPageMap } from 'nextra/page-map'
+import { getIndexPageMap, getPageMap } from 'nextra/page-map'
 import Image from 'next/image'
 import './globals.css'
 import { Metadata } from 'next'
 import cn from 'clsx'
+import { TOC } from '@/components/toc'
 
 export const metadata: Metadata = {
   description: 'Cifarm is farm thief earn game',
@@ -95,6 +96,10 @@ export default async function RootLayout({ children }) {
           sidebar={{ defaultMenuCollapseLevel: 1 }}
           footer={footer}
           editLink="Edit this page on GitHub"
+          toc={{
+            backToTop: null,
+            extraContent: <TOC />,
+          }}
         >
           {children}
         </Layout>
