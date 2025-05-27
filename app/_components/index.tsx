@@ -1,3 +1,7 @@
 export * from "./growth-stages"
 export * from "./overview-page"
 export * from "./tools-table"
+export * from "./information-grid"
+export * from "./gold-icon"
+export * from "./exp-icon"
+export * from "./badge"

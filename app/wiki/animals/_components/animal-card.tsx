@@ -1,3 +1,4 @@
+import { ExpIcon, GoldIcon, InformationGrid } from "@/app/_components"
 import { type AnimalId, animals } from "../_data"
 
 interface AnimalCardProps {
@@ -40,23 +41,7 @@ export const AnimalCard = ({ animalId }: AnimalCardProps) => {
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
             Type
           </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">{animal.type}</div>
-        </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Price
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {animal.price} coins
-          </div>
-        </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Sell Price
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {animal.sellPrice} coins
-          </div>
+          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">{animal.type.charAt(0).toUpperCase() + animal.type.slice(1)}</div>
         </div>
         <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
@@ -100,14 +85,6 @@ export const AnimalCard = ({ animalId }: AnimalCardProps) => {
         </div>
         <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Offspring Price
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {animal.offspringPrice} coins
-          </div>
-        </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
             Growth Time
           </div>
           <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
@@ -130,22 +107,27 @@ export const AnimalCard = ({ animalId }: AnimalCardProps) => {
             {animal.harvestQuantity}
           </div>
         </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Basic Harvest XP
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {animal.basicHarvestExperiences}
-          </div>
-        </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Quality Harvest XP
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {animal.qualityHarvestExperiences}
-          </div>
-        </div>
+
+      <InformationGrid
+        title="Experience per harvest"
+        leftTitle="Basic"
+        leftValue={animal.basicHarvestExperiences.toString()}
+        leftIcon={<ExpIcon />}
+        rightTitle="Quality"
+        rightValue={animal.qualityHarvestExperiences.toString()}
+        rightIcon={<ExpIcon />}
+      />
+     
+      <InformationGrid
+        title="Market"
+        leftTitle="Buy price"
+        leftValue={animal.offspringPrice.toString()}
+        leftIcon={<GoldIcon />}
+        rightTitle="Sell price"
+        rightValue={animal.sellPrice.toString()}
+        rightIcon={<GoldIcon />}
+      />
+
       </div>
     </div>
   )

@@ -32,7 +32,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/mdx-components.js"  ],
+, "app/mdx-components.js", "app/wiki/tools/page.mdx"  ],
   "exclude": [
     "node_modules"
   ]
