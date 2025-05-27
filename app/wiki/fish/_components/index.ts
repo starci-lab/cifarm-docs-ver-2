@@ -1,0 +1,1 @@
+export { FishCard } from "./fish-card" 
