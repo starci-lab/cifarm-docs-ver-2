@@ -1,3 +1,4 @@
+import { GoldIcon } from "@/app/_components"
 import { type SupplyId, supplies } from "../_data"
 
 interface SupplyCardProps {
@@ -38,16 +39,10 @@ export const SupplyCard = ({ supplyId }: SupplyCardProps) => {
       <div className="bg-white dark:bg-gray-800">
         <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Type
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">{supply.type}</div>
-        </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
             Price
           </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {supply.price} coins
+          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400 flex items-center gap-2">
+            {supply.price} <GoldIcon />
           </div>
         </div>
         <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">

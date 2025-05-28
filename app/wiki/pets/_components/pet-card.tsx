@@ -1,3 +1,5 @@
+import { ExpIcon, GoldIcon } from "@/app/_components"
+import { InformationGrid } from "@/app/_components"
 import { type PetId, pets } from "../_data"
 
 interface PetCardProps {
@@ -40,23 +42,7 @@ export const PetCard = ({ petId }: PetCardProps) => {
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
             Type
           </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">{pet.type}</div>
-        </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Price
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {pet.price} coins
-          </div>
-        </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Sell Price
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {pet.sellPrice} coins
-          </div>
+          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">{pet.type.charAt(0).toUpperCase() + pet.type.slice(1)}</div>
         </div>
         <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
@@ -84,13 +70,23 @@ export const PetCard = ({ petId }: PetCardProps) => {
         </div>
         <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Help Success Experience
+            Help Success Experience 
           </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {pet.helpSuccessExperience}
+          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400 flex items-center gap-2">
+            {pet.helpSuccessExperience} <ExpIcon />
           </div>
         </div>
       </div>
+
+      <InformationGrid
+        title="Market"
+        leftTitle="Buy price"
+        leftValue={pet.price.toString()}
+        leftIcon={<GoldIcon />}
+        rightTitle="Sell price"
+        rightValue={pet.sellPrice.toString()}
+        rightIcon={<GoldIcon />}
+      />
     </div>
   )
 } 

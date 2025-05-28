@@ -1,3 +1,6 @@
+import { GoldIcon } from "@/app/_components"
+import { ExpIcon } from "@/app/_components"
+import { InformationGrid } from "@/app/_components"
 import { type TileId, tiles } from "../_data"
 
 interface TileCardProps {
@@ -36,22 +39,6 @@ export const TileCard = ({ tileId }: TileCardProps) => {
 
       {/* Information table */}
       <div className="bg-white dark:bg-gray-800">
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Price
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {tile.price} coins
-          </div>
-        </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Sell Price
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {tile.sellPrice} coins
-          </div>
-        </div>
         <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
             NFT
@@ -93,6 +80,16 @@ export const TileCard = ({ tileId }: TileCardProps) => {
           </div>
         </div>
       </div>
+      
+      <InformationGrid
+        title="Market"
+        leftTitle="Buy price"
+        leftValue={tile.price.toString()}
+        leftIcon={<GoldIcon />}
+        rightTitle="Sell price"
+        rightValue={tile.sellPrice.toString()}
+        rightIcon={<GoldIcon />}
+      />
     </div>
   )
 } 

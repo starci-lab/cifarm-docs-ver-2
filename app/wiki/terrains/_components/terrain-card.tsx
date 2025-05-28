@@ -38,12 +38,6 @@ export const TerrainCard = ({ terrainId }: TerrainCardProps) => {
       <div className="bg-white dark:bg-gray-800">
         <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Type
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">{terrain.type}</div>
-        </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
             Available in Shop
           </div>
           <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">

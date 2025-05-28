@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { type CropId, crops } from "../_data"
+import { ExpIcon, GoldIcon, InformationGrid } from "@/app/_components"
 
 interface CropCardProps {
   cropId: CropId
@@ -73,7 +74,7 @@ export const CropCard = ({ cropId }: CropCardProps) => {
             Growth time
           </div>
           <div className="px-4 py-3 text-sm text-gray-700 dark:text-gray-300">
-            {information.growthStageDuration / 60} minutes
+            {Math.round(information.growthStageDuration / 60)} minutes
           </div>
         </div>
         <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
@@ -91,51 +92,26 @@ export const CropCard = ({ cropId }: CropCardProps) => {
       </div>
 
       {/* Experience section */}
-      <div className="bg-blue-100 dark:bg-gray-600 px-4 py-2">
-        <h2 className="text-center font-semibold text-gray-700 dark:text-gray-200">Experience</h2>
-      </div>
-
-      {/* Experience grid */}
-      <div className="bg-white dark:bg-gray-800 px-4 py-4">
-        <div className="grid grid-cols-2 gap-2">
-          <div className="text-center">
-            <div className="text-gray-600 dark:text-gray-400 mb-1">Basic</div>
-            <div className="text-sm font-semibold text-gray-900 dark:text-white">
-              {information.basicHarvestExperiences} XP
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-yellow-500 dark:text-yellow-400 mb-1">Quality</div>
-            <div className="text-sm font-semibold text-gray-900 dark:text-white">
-              {information.qualityHarvestExperiences} XP
-            </div>
-          </div>
-        </div>
-      </div>
+      <InformationGrid
+        title="Experience"
+        leftTitle="Basic"
+        leftValue={information.basicHarvestExperiences.toString()}
+        rightTitle="Quality"
+        rightValue={information.qualityHarvestExperiences.toString()}
+        leftIcon={<ExpIcon />}
+        rightIcon={<ExpIcon />}
+      />
 
       {/* Sell price section */}
-      <div className="bg-blue-100 dark:bg-gray-600 px-4 py-2">
-        <h2 className="text-center font-semibold text-gray-700 dark:text-gray-200">Sell price</h2>
-      </div>
-
-      <div className="bg-white dark:bg-gray-800 px-4 py-4">
-        <div className="grid grid-cols-2 gap-2">
-          <div className="text-center">
-            <div className="text-gray-600 dark:text-gray-400 mb-1">Basic</div>
-            <div className="text-sm font-semibold text-gray-900 dark:text-white flex justify-center gap-2">
-              {information.basicSellPrice} 
-              <Image src="/icons/gold.png" alt="coin" width={20} height={20} />
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-yellow-500 dark:text-yellow-400 mb-1">Quality</div>
-            <div className="text-sm font-semibold text-gray-900 dark:text-white flex justify-center gap-2">
-              {information.qualitySellPrice} 
-              <Image src="/icons/gold.png" alt="coin" width={20} height={20} />
-            </div>
-          </div>
-        </div>
-      </div>
+      <InformationGrid
+        title="Market"
+        leftTitle="Basic"
+        leftValue={information.seed.price.toString()}
+        leftIcon={<GoldIcon />}
+        rightTitle="Quality"
+        rightValue={information.qualitySellPrice.toString()}
+        rightIcon={<GoldIcon />}
+      />
     </div>
   )
 }

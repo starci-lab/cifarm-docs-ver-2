@@ -1,3 +1,5 @@
+import { ExpIcon, GoldIcon } from "@/app/_components"
+import { InformationGrid } from "@/app/_components"
 import { type BuildingId, buildings } from "../_data"
 
 interface BuildingCardProps {
@@ -40,26 +42,8 @@ export const BuildingCard = ({ buildingId }: BuildingCardProps) => {
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
             Type
           </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">{building.kind}</div>
+          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">{building.kind.charAt(0).toUpperCase() + building.kind.slice(1)}</div>
         </div>
-        <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-          <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-            Price
-          </div>
-          <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-            {building.price} coins
-          </div>
-        </div>
-        {building.sellPrice && (
-          <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-            <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-              Sell Price
-            </div>
-            <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-              {building.sellPrice} coins
-            </div>
-          </div>
-        )}
         <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
           <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
             Available in Shop
@@ -106,7 +90,7 @@ export const BuildingCard = ({ buildingId }: BuildingCardProps) => {
               Animal Type
             </div>
             <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-              {building.animalContainedType}
+              {building.animalContainedType.charAt(0).toUpperCase() + building.animalContainedType.slice(1)}
             </div>
           </div>
         )}
@@ -122,66 +106,36 @@ export const BuildingCard = ({ buildingId }: BuildingCardProps) => {
             </div>
             <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
               <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-                Basic Harvest XP
-              </div>
-              <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-                {building.beeHouseBasicHarvestExperiences}
-              </div>
-            </div>
-            <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-              <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-                Quality Harvest XP
-              </div>
-              <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-                {building.beeHouseQualityHarvestExperiences}
-              </div>
-            </div>
-            <div className="grid grid-cols-2 border-b border-gray-200 dark:border-gray-600">
-              <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
                 Base Honey Yield
               </div>
               <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
                 {building.baseHoneyYieldCoefficient}
               </div>
             </div>
+
+            <InformationGrid
+              title="Harvest"
+              leftTitle="Basic"
+              leftValue={building.beeHouseBasicHarvestExperiences?.toString() || "0"}
+              leftIcon={<ExpIcon />}
+              rightTitle="Quality"
+              rightValue={building.beeHouseQualityHarvestExperiences?.toString() || "0"}
+              rightIcon={<ExpIcon />}
+            />
           </>
         )}
       </div>
 
-      {/* Upgrades section */}
-      {building.upgrades && building.upgrades.length > 0 && (
-        <>
-          <div className="bg-blue-100 dark:bg-gray-600 px-4 py-2 mt-4">
-            <h2 className="text-center font-semibold text-gray-700 dark:text-gray-200">Upgrades</h2>
-          </div>
-          <div className="bg-white dark:bg-gray-800">
-            {building.upgrades.map((upgrade, index) => (
-              <div key={index} className="border-b border-gray-200 dark:border-gray-600 last:border-b-0">
-                <div className="px-4 py-3">
-                  <div className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                    Level {upgrade.upgradeLevel}
-                  </div>
-                  <div className="mt-2 space-y-1">
-                    <div className="text-sm text-gray-600 dark:text-gray-400">
-                      Capacity: {upgrade.capacity}
-                    </div>
-                    {upgrade.upgradePrice && (
-                      <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Upgrade Price: {upgrade.upgradePrice} coins
-                      </div>
-                    )}
-                    {upgrade.honeyMultiplier && (
-                      <div className="text-sm text-gray-600 dark:text-gray-400">
-                        Honey Multiplier: {upgrade.honeyMultiplier}x
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </>
-      )}
+      
+      <InformationGrid
+        title="Market"
+        leftTitle="Buy price"
+        leftValue={building.price?.toString() || "0"}
+        leftIcon={<GoldIcon />}
+        rightTitle="Sell price"
+        rightValue={building.sellPrice?.toString() || "0"}
+        rightIcon={<GoldIcon />}
+      />
     </div>
   )
 } 
