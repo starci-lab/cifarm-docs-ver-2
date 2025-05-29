@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import { type CropId, crops } from "../_data"
+import { envConfig } from "@/config/envConfig"
 
 interface CropGrowthStageProps {
   cropId: CropId
@@ -28,7 +29,7 @@ export const CropGrowthStage = ({ cropId }: CropGrowthStageProps) => {
                 <td key={stage} className="px-4 py-3 text-center place-items-center">
                  <div className="w-16 h-20 flex items-end justify-center">
                     <img
-                      src={data.imageUrl}
+                      src={envConfig().assetBaseUrl + data.imageUrl}
                       alt={`${data.title} stage`}
                       className={
                         cn("w-fit h-fit object-contain mx-auto",

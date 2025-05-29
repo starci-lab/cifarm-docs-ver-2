@@ -14,5 +14,13 @@ export default withNextra({
         'next-mdx-import-source-file': './mdx-components.js'
       }
     }
-  }
+  },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'cifarm.sgp1.cdn.digitaloceanspaces.com',
+        protocol: 'https',  
+      },
+    ],
+  },
 })

@@ -35,15 +35,15 @@ export interface CropInformation {
         price: number;
         imageUrl: string;
     },
-    growthStageDuration: number;
+    growthStageDuration: number; // seconds
     unlockLevel: number;
     basicHarvestExperiences: number;
-    qualityHarvestExperiences: number;
+    qualityHarvestExperiences: number; // 2x basicHarvestExperiences
     harvestQuantity: number;
     perennialCount: number;
     availableInShop: boolean;
-    basicSellPrice: number;
-    qualitySellPrice: number;
+    basicSellPrice: number; // sell price
+    qualitySellPrice: number; // 2x basicSellPrice
 }
 
 
@@ -72,7 +72,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "4 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/turnip/5.png",
             },
         },
@@ -121,7 +121,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "10 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/carrot/5.png",
             },
         },
@@ -170,7 +170,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "15 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/potato/5.png",
             },
         },
@@ -219,7 +219,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "20 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/pineapple/5.png",
             },
         },
@@ -268,7 +268,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "25 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/watermelon/5.png",
             },
         },
@@ -317,7 +317,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "33.33 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/cucumber/5.png",
             },
         },
@@ -347,38 +347,43 @@ export const crops: Record<CropId, CropValue> = {
             1: {
                 title: "Stage 1",
                 description: "20 minutes",
-                imageUrl: "/crops/bellPepper/1.png",
+                imageUrl: "/crops/bell-pepper/1.png",
             },
             2: {
                 title: "Stage 2",
                 description: "20 minutes",
-                imageUrl: "/crops/bellPepper/2.png",
+                imageUrl: "/crops/bell-pepper/2.png",
             },
             3: {
                 title: "Stage 3",
                 description: "20 minutes",
-                imageUrl: "/crops/bellPepper/3.png",
+                imageUrl: "/crops/bell-pepper/3.png",
             },
             4: {
                 title: "Stage 4",
                 description: "20 minutes",
-                imageUrl: "/crops/bellPepper/4.png",
+                imageUrl: "/crops/bell-pepper/4.png",
             },
             5: {
                 title: "Stage 5",
-                description: "20 minutes",
-                imageUrl: "/crops/bellPepper/5.png",
+                description: "Harvest time",
+                imageUrl: "/crops/bell-pepper/5.png",
+            },
+            6: {
+                title: "Regrowth",
+                description: "40 minutes", //"20 minutes" x2
+                imageUrl: "/crops/bell-pepper/3.png",
             },
         },
         information: {
             name: "Bell Pepper",
             description: "The bell pepper is the fruit of plants in the Grossum Group of the species Capsicum annuum.",
-            imageUrl: "/products/bellPepper.png",
+            imageUrl: "/products/bell-pepper.png",
             type: "Crops",
             seed: {
                 name: "Bell Pepper Seed",
                 price: 150,
-                imageUrl: "/shop/crops/bellPepper.png",
+                imageUrl: "/shop/crops/bell-pepper.png",
             },
             growthStageDuration: 1200,
             unlockLevel: 7,
@@ -415,8 +420,13 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "26.67 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/strawberry/5.png",
+            },
+            6: {
+                title: "Regrowth",
+                description: "53.33 minutes", //"26.67 minutes" x2
+                imageUrl: "/crops/strawberry/3.png",
             },
         },
         information: {
@@ -464,7 +474,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "50 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/pumpkin/5.png",
             },
         },
@@ -513,7 +523,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "53.33 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/cauliflower/5.png",
             },
         },
@@ -562,7 +572,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "80 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/tomato/5.png",
             },
         },
@@ -611,7 +621,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "100 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/eggplant/5.png",
             },
         },
@@ -660,7 +670,7 @@ export const crops: Record<CropId, CropValue> = {
             },
             5: {
                 title: "Stage 5",
-                description: "120 minutes",
+                description: "Harvest time",
                 imageUrl: "/crops/pea/5.png",
             },
         },
