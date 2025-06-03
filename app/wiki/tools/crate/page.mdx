@@ -1,11 +1,19 @@
 ---
 title: 'Crate'
-description: 'A crate to store your items.'
+description: 'A sturdy wooden crate for storing your farm produce and tools. Essential for organizing your inventory.'
 ---
 
-import { ToolCard } from '../_components'
+import { ToolCard, ToolUsage, ToolObtain } from '../_components'
 import { ToolId } from '../_data'
 
 # Crate
 
-<ToolCard toolId={ToolId.Crate} /> 
+<ToolCard toolId={ToolId.Crate} />
+
+## Usage
+
+<ToolUsage toolId={ToolId.Crate} />
+
+## How to obtain
+
+<ToolObtain toolId={ToolId.Crate} />

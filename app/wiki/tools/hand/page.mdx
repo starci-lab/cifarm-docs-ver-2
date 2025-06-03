@@ -1,11 +1,19 @@
 ---
 title: 'Hand'
-description: 'Use your hands to view the information of an item.'
+description: 'Your trusty hands - the most basic tool for interacting with your farm. Use them to view information about items and perform basic actions.'
 ---
 
-import { ToolCard } from '../_components'
+import { ToolCard, ToolUsage, ToolObtain } from '../_components'
 import { ToolId } from '../_data'
 
 # Hand
 
-<ToolCard toolId={ToolId.Hand} /> 
+<ToolCard toolId={ToolId.Hand} />
+
+## Usage
+
+<ToolUsage toolId={ToolId.Hand} />
+
+## How to obtain
+
+<ToolObtain toolId={ToolId.Hand} />
