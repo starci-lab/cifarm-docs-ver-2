@@ -11,7 +11,7 @@ export const TOC: FC = async ({
     <div className="grid gap-2 x:text-xs x:font-medium">
       <Card className="mt-4 p-2 gap-1">
         <CardHeader className="px-1 py-1">
-          <CardTitle className="text-lg leading-normal">Cifarm is released!</CardTitle>
+          <CardTitle className="text-lg leading-normal">Cifarm is released Act 1!</CardTitle>
         </CardHeader>
         <CardContent className="px-1 pt-0 pb-3">
           <p className="text-sm text-muted-foreground">
