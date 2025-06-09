@@ -1,15 +1,19 @@
 ---
-title: Cat
-description: A friendly companion that helps protect your farm.
+title: 'Cat'
+description: 'A friendly and playful cat that can help you attack other farms.'
 ---
 
-import { PetCard } from "../_components"
-import { PetId } from "../_data"
+import { PetCard, PetObtain, PetUsage } from '../_components'
+import { PetId } from '../_data'
 
 # Cat
 
-<PetCard petId={PetId.Cat} /> 
+<PetCard petId={PetId.Cat} />
 
-## Assistance Calculation
+## How to obtain
 
-Inprogress writing...
+<PetObtain petId={PetId.Cat} />
+
+## Usage
+
+<PetUsage petId={PetId.Cat} /> 
