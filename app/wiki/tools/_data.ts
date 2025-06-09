@@ -44,7 +44,7 @@ export const tools: Record<ToolId, ToolValue> = {
             inspect: {
                 title: "Inspect",
                 description: "View detailed information about any item or object",
-                imageUrl: "/tools/hand/inspect.png",
+                imageUrl: "/screenshots/tools/hand.jpg",
             }
         }
     },
@@ -58,19 +58,9 @@ export const tools: Record<ToolId, ToolValue> = {
         },
         usage: {
             harvestCrop: {
-                title: "Harvest Crop",
-                description: "Harvest crops from your farm",
-                imageUrl: "/tools/crate/harvest.png",
-            },
-            harvestFruit: {
-                title: "Harvest Fruit",
-                description: "Harvest fruit from your farm",
-                imageUrl: "/tools/crate/harvest-fruit.png",
-            },
-            harvestAnimalProduct: {
-                title: "Harvest Animal Product",
-                description: "Harvest animal products from your farm",
-                imageUrl: "/tools/crate/harvest-animal-product.png",
+                title: "Harvest",
+                description: "Harvest from your farm",
+                imageUrl: "/screenshots/tools/crate.jpg",
             },
         }
     },
@@ -86,7 +76,7 @@ export const tools: Record<ToolId, ToolValue> = {
             water: {
                 title: "Water Crops",
                 description: "Water your crops to help them grow",
-                imageUrl: "/tools/watering-can/water.png",
+                imageUrl: "/screenshots/tools/wateringCan.png",
             }
         }
     },
@@ -102,7 +92,7 @@ export const tools: Record<ToolId, ToolValue> = {
             spray: {
                 title: "Spray Pesticide",
                 description: "Apply pesticide to protect crops from pests",
-                imageUrl: "/tools/pesticide/spray.png",
+                imageUrl: "/screenshots/tools/pests.png",
             }
         }
     },
@@ -118,7 +108,7 @@ export const tools: Record<ToolId, ToolValue> = {
             spray: {
                 title: "Spray Herbicide",
                 description: "Apply herbicide to remove weeds",
-                imageUrl: "/tools/herbicide/spray.png",
+                imageUrl: "/screenshots/tools/weed.png",
             }
         }
     },
@@ -134,7 +124,7 @@ export const tools: Record<ToolId, ToolValue> = {
             upgrade: {
                 title: "Upgrade",
                 description: "Upgrade your tools to improve their efficiency",
-                imageUrl: "/tools/hammer/upgrade.png",
+                imageUrl: "/screenshots/tools/hammer.jpg",
             }
         }
     },
@@ -151,7 +141,7 @@ export const tools: Record<ToolId, ToolValue> = {
             treat: {
                 title: "Treat Animals",
                 description: "Cure animals of sickness",
-                imageUrl: "/tools/animal-medicine/treat.png",
+                imageUrl: "/screenshots/tools/animalMedicine.jpg",
             },
         }
     },
@@ -168,7 +158,7 @@ export const tools: Record<ToolId, ToolValue> = {
             catch: {
                 title: "Catch Bugs",
                 description: "Swing the net to catch insects",
-                imageUrl: "/tools/bug-net/catch.png",
+                imageUrl: "/screenshots/tools/bugnet.jpg",
             }
         }
     },
