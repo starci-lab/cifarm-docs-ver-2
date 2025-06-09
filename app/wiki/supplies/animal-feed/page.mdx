@@ -1,11 +1,19 @@
 ---
 title: 'Animal Feed'
-description: 'Feed for your farm animals to keep them healthy and productive.'
+description: 'Feed for your farm animals to keep them productive.'
 ---
 
-import { SupplyCard } from '../_components'
+import { SupplyCard, SupplyObtain, SupplyUsage } from '../_components'
 import { SupplyId } from '../_data'
 
 # Animal Feed
 
-<SupplyCard supplyId={SupplyId.AnimalFeed} /> 
+<SupplyCard supplyId={SupplyId.AnimalFeed} />
+
+## How to obtain
+
+<SupplyObtain supplyId={SupplyId.AnimalFeed} />
+
+## Usage
+
+<SupplyUsage supplyId={SupplyId.AnimalFeed} /> 

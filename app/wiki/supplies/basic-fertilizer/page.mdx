@@ -3,9 +3,17 @@ title: 'Basic Fertilizer'
 description: 'A basic fertilizer that helps crops grow faster.'
 ---
 
-import { SupplyCard } from '../_components'
+import { SupplyCard, SupplyObtain, SupplyUsage } from '../_components'
 import { SupplyId } from '../_data'
 
 # Basic Fertilizer
 
-<SupplyCard supplyId={SupplyId.BasicFertilizer} /> 
+<SupplyCard supplyId={SupplyId.BasicFertilizer} />
+
+## How to obtain
+
+<SupplyObtain supplyId={SupplyId.BasicFertilizer} />
+
+## Usage
+
+<SupplyUsage supplyId={SupplyId.BasicFertilizer} /> 

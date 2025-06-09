@@ -21,6 +21,8 @@ export interface TerrainValue {
     type: TerrainType;
     sellable: boolean;
     availableInShop: boolean;
+    price?: number;
+    sellPrice?: number;
 }
 
 export const terrains: Record<TerrainId, TerrainValue> = {
