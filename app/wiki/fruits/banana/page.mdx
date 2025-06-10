@@ -1,11 +1,19 @@
 ---
-title: Banana
-description: A sweet and nutritious fruit that grows in bunches.
+title: 'Banana'
+description: 'A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.'
 ---
 
-import { FruitCard } from "../_components"
-import { FruitId } from "../_data"
+import { FruitCard, FruitGrowthStage, FruitObtain } from '../_components'
+import { FruitId } from '../_data'
 
 # Banana
 
-<FruitCard fruitId={FruitId.Banana} /> 
+<FruitCard fruitId={FruitId.Banana} />
+
+## Growth Stages
+
+<FruitGrowthStage fruitId={FruitId.Banana} />
+
+## How to Obtain
+
+<FruitObtain fruitId={FruitId.Banana} /> 

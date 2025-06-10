@@ -1,11 +1,19 @@
 ---
-title: Apple
-description: A crisp and juicy fruit that comes in many varieties.
+title: 'Apple'
+description: 'An apple is a round, edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.'
 ---
 
-import { FruitCard } from "../_components"
-import { FruitId } from "../_data"
+import { FruitCard, FruitGrowthStage, FruitObtain } from '../_components'
+import { FruitId } from '../_data'
 
 # Apple
 
-<FruitCard fruitId={FruitId.Apple} /> 
+<FruitCard fruitId={FruitId.Apple} />
+
+## Growth Stages
+
+<FruitGrowthStage fruitId={FruitId.Apple} />
+
+## How to Obtain
+
+<FruitObtain fruitId={FruitId.Apple} /> 

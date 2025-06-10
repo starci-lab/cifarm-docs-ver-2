@@ -1,11 +1,19 @@
 ---
-title: Dragon Fruit
-description: An exotic fruit with a vibrant pink skin and sweet white flesh.
+title: 'Dragon Fruit'
+description: 'Dragon fruit is a tropical fruit that grows on the Hylocereus cactus, also known as the Honolulu queen. It has a bright pink or yellow skin with white or red flesh inside.'
 ---
 
-import { FruitCard } from "../_components"
-import { FruitId } from "../_data"
+import { FruitCard, FruitGrowthStage, FruitObtain } from '../_components'
+import { FruitId } from '../_data'
 
 # Dragon Fruit
 
-<FruitCard fruitId={FruitId.DragonFruit} /> 
+<FruitCard fruitId={FruitId.DragonFruit} />
+
+## Growth Stages
+
+<FruitGrowthStage fruitId={FruitId.DragonFruit} />
+
+## How to Obtain
+
+<FruitObtain fruitId={FruitId.DragonFruit} /> 

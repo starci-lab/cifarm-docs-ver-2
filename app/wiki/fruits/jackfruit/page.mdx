@@ -1,11 +1,19 @@
 ---
-title: Jackfruit
-description: The world's largest tree-borne fruit, known for its sweet taste and meaty texture.
+title: 'Jackfruit'
+description: 'The jackfruit is a species of tree in the fig, mulberry, and breadfruit family. It is the largest tree-borne fruit, reaching up to 55 kg in weight.'
 ---
 
-import { FruitCard } from "../_components"
-import { FruitId } from "../_data"
+import { FruitCard, FruitGrowthStage, FruitObtain } from '../_components'
+import { FruitId } from '../_data'
 
 # Jackfruit
 
-<FruitCard fruitId={FruitId.Jackfruit} /> 
+<FruitCard fruitId={FruitId.Jackfruit} />
+
+## Growth Stages
+
+<FruitGrowthStage fruitId={FruitId.Jackfruit} />
+
+## How to Obtain
+
+<FruitObtain fruitId={FruitId.Jackfruit} /> 

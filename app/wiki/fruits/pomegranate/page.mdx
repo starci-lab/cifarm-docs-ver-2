@@ -1,11 +1,19 @@
 ---
-title: Pomegranate
-description: A fruit filled with juicy, ruby-red arils that burst with flavor.
+title: 'Pomegranate'
+description: 'The pomegranate is a fruit-bearing deciduous shrub in the family Lythraceae, subfamily Punicoideae, that grows between 5 and 10 m tall. The pomegranate was originally described throughout the Mediterranean region.'
 ---
 
-import { FruitCard } from "../_components"
-import { FruitId } from "../_data"
+import { FruitCard, FruitGrowthStage, FruitObtain } from '../_components'
+import { FruitId } from '../_data'
 
 # Pomegranate
 
-<FruitCard fruitId={FruitId.Pomegranate} /> 
+<FruitCard fruitId={FruitId.Pomegranate} />
+
+## Growth Stages
+
+<FruitGrowthStage fruitId={FruitId.Pomegranate} />
+
+## How to Obtain
+
+<FruitObtain fruitId={FruitId.Pomegranate} /> 

@@ -1,11 +1,19 @@
 ---
-title: Rambutan
-description: A tropical fruit with a hairy red skin and sweet, translucent flesh.
+title: 'Rambutan'
+description: 'The rambutan is a medium-sized tropical tree in the family Sapindaceae. The name also refers to the edible fruit produced by this tree. The rambutan is native to Southeast Asia.'
 ---
 
-import { FruitCard } from "../_components"
-import { FruitId } from "../_data"
+import { FruitCard, FruitGrowthStage, FruitObtain } from '../_components'
+import { FruitId } from '../_data'
 
 # Rambutan
 
-<FruitCard fruitId={FruitId.Rambutan} /> 
+<FruitCard fruitId={FruitId.Rambutan} />
+
+## Growth Stages
+
+<FruitGrowthStage fruitId={FruitId.Rambutan} />
+
+## How to Obtain
+
+<FruitObtain fruitId={FruitId.Rambutan} /> 

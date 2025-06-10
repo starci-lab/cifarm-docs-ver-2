@@ -1,0 +1,36 @@
+---
+title: 'Leveling Guide'
+description: 'Learn about leveling in CiFarm, calculate experience needed, and discover ways to gain experience.'
+---
+
+import { LevelCalculator, ExperienceTable } from './_components'
+
+# Leveling Guide
+
+Welcome to the leveling guide! Here you can calculate the experience needed to reach your target level and discover various ways to gain experience in CiFarm.
+
+## Experience Calculator
+
+Use the calculator below to determine how much experience you need to reach your desired level.
+
+<LevelCalculator />
+
+## Experience Gain Activities
+
+Below is a comprehensive list of all activities that grant experience in CiFarm. Each activity has an energy cost and provides a specific amount of experience.
+
+<ExperienceTable />
+
+## Level Experience Requirements
+
+The experience required for each level follows this formula:
+```
+Experience = 50 * level + 25 * (level - 1)²
+```
+
+For example:
+- Level 1: 50 experience
+- Level 2: 125 experience
+- Level 3: 225 experience
+- Level 4: 350 experience
+- Level 5: 500 experience
