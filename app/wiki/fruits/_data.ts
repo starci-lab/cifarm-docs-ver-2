@@ -9,6 +9,21 @@ export enum FruitId {
     Pomegranate = "Pomegranate",
 }
 
+export enum NFTRarity {
+    Common = "Common",
+    Rare = "Rare",
+    Epic = "Epic"
+}
+
+export enum AttributeName {
+    GrowthAcceleration = "GrowthAcceleration",
+    QualityYield = "QualityYield",
+    DiseaseResistance = "DiseaseResistance",
+    HarvestYieldBonus = "HarvestYieldBonus"
+}
+
+export const CONST_COMPUTE = 1000
+
 export interface FruitValue {
     id: FruitId;
     infomation: FruitInfomation;
@@ -33,6 +48,11 @@ export interface FruitValue {
             title: string;
             description: string;
             imageUrl: string;
+        }
+    },
+    rarities?: {
+        [key in NFTRarity]: {
+            [key in AttributeName]: number;
         }
     }
 }
@@ -237,6 +257,26 @@ export const fruits: Record<FruitId, FruitValue> = {
                 description: "Obtainable through NFT marketplace",
                 imageUrl: "/icons/nft-marketplace.png"
             }
+        },
+        rarities: {
+            [NFTRarity.Common]: {
+                [AttributeName.GrowthAcceleration]: 100,
+                [AttributeName.QualityYield]: 100,
+                [AttributeName.DiseaseResistance]: 100,
+                [AttributeName.HarvestYieldBonus]: 100
+            },
+            [NFTRarity.Rare]: {
+                [AttributeName.GrowthAcceleration]: 200,
+                [AttributeName.QualityYield]: 200,
+                [AttributeName.DiseaseResistance]: 200,
+                [AttributeName.HarvestYieldBonus]: 200
+            },
+            [NFTRarity.Epic]: {
+                [AttributeName.GrowthAcceleration]: 300,
+                [AttributeName.QualityYield]: 300,
+                [AttributeName.DiseaseResistance]: 300,
+                [AttributeName.HarvestYieldBonus]: 300
+            }
         }
     },
     [FruitId.Jackfruit]: {
@@ -304,6 +344,26 @@ export const fruits: Record<FruitId, FruitValue> = {
                 title: "NFT",
                 description: "Obtainable through NFT marketplace",
                 imageUrl: "/icons/nft-marketplace.png"
+            }
+        },
+        rarities: {
+            [NFTRarity.Common]: {
+                [AttributeName.GrowthAcceleration]: 100,
+                [AttributeName.QualityYield]: 100,
+                [AttributeName.DiseaseResistance]: 100,
+                [AttributeName.HarvestYieldBonus]: 100
+            },
+            [NFTRarity.Rare]: {
+                [AttributeName.GrowthAcceleration]: 200,
+                [AttributeName.QualityYield]: 200,
+                [AttributeName.DiseaseResistance]: 200,
+                [AttributeName.HarvestYieldBonus]: 200
+            },
+            [NFTRarity.Epic]: {
+                [AttributeName.GrowthAcceleration]: 300,
+                [AttributeName.QualityYield]: 300,
+                [AttributeName.DiseaseResistance]: 300,
+                [AttributeName.HarvestYieldBonus]: 300
             }
         }
     },
@@ -373,6 +433,26 @@ export const fruits: Record<FruitId, FruitValue> = {
                 description: "Obtainable through NFT marketplace",
                 imageUrl: "/icons/nft-marketplace.png"
             }
+        },
+        rarities: {
+            [NFTRarity.Common]: {
+                [AttributeName.GrowthAcceleration]: 100,
+                [AttributeName.QualityYield]: 100,
+                [AttributeName.DiseaseResistance]: 100,
+                [AttributeName.HarvestYieldBonus]: 100
+            },
+            [NFTRarity.Rare]: {
+                [AttributeName.GrowthAcceleration]: 200,
+                [AttributeName.QualityYield]: 200,
+                [AttributeName.DiseaseResistance]: 200,
+                [AttributeName.HarvestYieldBonus]: 200
+            },
+            [NFTRarity.Epic]: {
+                [AttributeName.GrowthAcceleration]: 300,
+                [AttributeName.QualityYield]: 300,
+                [AttributeName.DiseaseResistance]: 300,
+                [AttributeName.HarvestYieldBonus]: 300
+            }
         }
     },
     [FruitId.Pomegranate]: {
@@ -440,6 +520,26 @@ export const fruits: Record<FruitId, FruitValue> = {
                 title: "NFT",
                 description: "Obtainable through NFT marketplace",
                 imageUrl: "/icons/nft-marketplace.png"
+            }
+        },
+        rarities: {
+            [NFTRarity.Common]: {
+                [AttributeName.GrowthAcceleration]: 100,
+                [AttributeName.QualityYield]: 100,
+                [AttributeName.DiseaseResistance]: 100,
+                [AttributeName.HarvestYieldBonus]: 100
+            },
+            [NFTRarity.Rare]: {
+                [AttributeName.GrowthAcceleration]: 200,
+                [AttributeName.QualityYield]: 200,
+                [AttributeName.DiseaseResistance]: 200,
+                [AttributeName.HarvestYieldBonus]: 200
+            },
+            [NFTRarity.Epic]: {
+                [AttributeName.GrowthAcceleration]: 300,
+                [AttributeName.QualityYield]: 300,
+                [AttributeName.DiseaseResistance]: 300,
+                [AttributeName.HarvestYieldBonus]: 300
             }
         }
     }
