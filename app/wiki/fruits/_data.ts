@@ -224,7 +224,13 @@ export const fruits: Record<FruitId, FruitValue> = {
                 imageUrl: "/fruits/dragon-fruit/3.png",
             },
         },
-        usage: null,
+        usage: {
+            1: {
+                title: "Ship into vault",
+                description: "You can ship your fruit into vault to receive a reward USDC.",
+                imageUrl: "/screenshots/fruits/ship.jpg"
+            },
+        },
         obtain: {
             nft: {
                 title: "NFT",
@@ -285,7 +291,14 @@ export const fruits: Record<FruitId, FruitValue> = {
                 imageUrl: "/fruits/jackfruit/3.png",
             },
         },
-        usage: null,
+        usage: {
+            1: {
+                title: "Ship into vault",
+                description: "You can ship your fruit into vault to receive a reward USDC.",
+                imageUrl: "/screenshots/fruits/ship.jpg"
+            },
+            
+        },
         obtain: {
             nft: {
                 title: "NFT",
@@ -346,7 +359,14 @@ export const fruits: Record<FruitId, FruitValue> = {
                 imageUrl: "/fruits/rambutan/3.png",
             },
         },
-        usage: null,
+        usage: {
+            1: {
+                title: "Ship into vault",
+                description: "You can ship your fruit into vault to receive a reward USDC.",
+                imageUrl: "/screenshots/fruits/ship.jpg"
+            },
+            
+        },
         obtain: {
             nft: {
                 title: "NFT",
@@ -407,7 +427,14 @@ export const fruits: Record<FruitId, FruitValue> = {
                 imageUrl: "/fruits/pomegranate/3.png",
             },
         },
-        usage: null,
+        usage: {
+            1: {
+                title: "Ship into vault",
+                description: "You can ship your fruit into vault to receive a reward USDC.",
+                imageUrl: "/screenshots/fruits/ship.jpg"
+            },
+            
+        },
         obtain: {
             nft: {
                 title: "NFT",
