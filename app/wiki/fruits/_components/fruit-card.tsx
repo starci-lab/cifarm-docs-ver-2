@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { type FruitId, fruits } from "../_data"
-import { ExpIcon, GoldIcon, InformationGrid } from "@/app/_components"
+import { Badge, ExpIcon, GoldIcon, InformationGrid } from "@/app/_components"
 import { envConfig } from "@/config/envConfig"
 
 interface FruitCardProps {
@@ -24,10 +24,15 @@ export const FruitCard = ({ fruitId }: FruitCardProps) => {
           {/* Fruit illustration */}
           <div className="flex-shrink-0">
             <img
-              src={envConfig().assetBaseUrl + "/fruits/" + fruitId.toLowerCase() + "/5.png"}
+              src={infomation.imageUrl}
               alt={fruitId}
               className="w-32 h-32 object-contain"
             />
+          </div>
+
+          {/* description */}
+          <div className="text-center text-gray-700 dark:text-gray-300">
+            {infomation.description}
           </div>
         </div>
       </div>
@@ -45,7 +50,9 @@ export const FruitCard = ({ fruitId }: FruitCardProps) => {
               Type
             </div>
             <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-              {infomation.isNFT ? "NFT" : "Regular"}
+              {infomation.isNFT ? <div className="w-fit">
+                <Badge>NFT</Badge>
+              </div> : "Regular"}
             </div>
           </div>
           <div className="grid grid-cols-2">
@@ -64,17 +71,19 @@ export const FruitCard = ({ fruitId }: FruitCardProps) => {
               {Math.round(infomation.matureGrowthStageDuration / 60)} minutes
             </div>
           </div>
-          <div className="grid grid-cols-2">
-            <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-              Price
+          {infomation.price && (
+            <div className="grid grid-cols-2">
+              <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
+                Price
+              </div>
+              <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
+                <span className="ml-1 flex">
+                  <Image src="/icons/gold.png" alt="coin" width={20} height={20} className="mr-1" />
+                  {"x" + infomation.price}
+                </span>
+              </div>
             </div>
-            <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-              <span className="ml-1 flex">
-                <Image src="/icons/gold.png" alt="coin" width={20} height={20} className="mr-1" />
-                {"x" + infomation.price}
-              </span>
-            </div>
-          </div>
+          )}
         </div>
         <div className="col-span-1">
           <div className="grid grid-cols-2">

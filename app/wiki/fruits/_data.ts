@@ -1,3 +1,5 @@
+import { envConfig } from "@/config/envConfig";
+
 export enum FruitId {
     Banana = "Banana",
     Apple = "Apple",
@@ -15,6 +17,8 @@ export interface FruitValue {
             title: string;
             description: string;
             imageUrl: string;
+            className?: string;
+            containerClassName?: string;
         }
     },
     usage: {
@@ -34,7 +38,7 @@ export interface FruitValue {
 }
 
 export interface FruitInfomation {
-    price: number;
+    price?: number;
     youngGrowthStageDuration: number;
     matureGrowthStageDuration: number;
     fertilizerTime: number;
@@ -46,6 +50,8 @@ export interface FruitInfomation {
     sellable: boolean;
     sellPrice?: number;
     isNFT: boolean;
+    imageUrl?: string;
+    description: string;
 }
 
 
@@ -53,6 +59,7 @@ export const fruits: Record<FruitId, FruitValue> = {
     [FruitId.Banana]: {
         id: FruitId.Banana,
         infomation: {
+            imageUrl: envConfig().assetBaseUrl + "/products/banana.png",
             price: 5000,
             youngGrowthStageDuration: 60 * 60 * 12, // 12 hours
             matureGrowthStageDuration: 60 * 60 * 6, // 6 hours
@@ -64,7 +71,8 @@ export const fruits: Record<FruitId, FruitValue> = {
             availableInShop: true,
             sellable: true,
             sellPrice: 2500,
-            isNFT: false
+            isNFT: false,
+            description: "A fast-growing fruit that's perfect for beginners. Bananas grow in clusters and provide a steady source of income. They're known for their quick growth cycle and reliable harvests."
         },
         growthStages: {
             1: {
@@ -94,7 +102,7 @@ export const fruits: Record<FruitId, FruitValue> = {
             },
             6: {
                 title: "Regrowth",
-                description: "6 hours",
+                description: "12 hours",
                 imageUrl: "/fruits/banana/3.png",
             },
         },
@@ -110,6 +118,7 @@ export const fruits: Record<FruitId, FruitValue> = {
     [FruitId.Apple]: {
         id: FruitId.Apple,
         infomation: {
+            imageUrl: envConfig().assetBaseUrl + "/products/apple.png",
             price: 5000,
             youngGrowthStageDuration: 60 * 60 * 12, // 12 hours
             matureGrowthStageDuration: 60 * 60 * 6, // 6 hours
@@ -121,7 +130,8 @@ export const fruits: Record<FruitId, FruitValue> = {
             availableInShop: true,
             sellable: true,
             sellPrice: 2500,
-            isNFT: false
+            isNFT: false,
+            description: "A classic fruit tree that produces crisp, juicy apples. These trees are known for their consistent yields and moderate growth time. Perfect for players looking to establish a stable farming routine."
         },
         growthStages: {
             1: {
@@ -151,7 +161,7 @@ export const fruits: Record<FruitId, FruitValue> = {
             },
             6: {
                 title: "Regrowth",
-                description: "6 hours",
+                description: "12 hours",
                 imageUrl: "/fruits/apple/3.png",
             },
         },
@@ -167,7 +177,7 @@ export const fruits: Record<FruitId, FruitValue> = {
     [FruitId.DragonFruit]: {
         id: FruitId.DragonFruit,
         infomation: {
-            price: 5000,
+            imageUrl: envConfig().assetBaseUrl + "/products/dragon-fruit.png",
             youngGrowthStageDuration: 60 * 60 * 18, // 18 hours
             matureGrowthStageDuration: 60 * 60 * 9, // 9 hours
             fertilizerTime: 60 * 60 * 8, // 8 hour
@@ -176,13 +186,17 @@ export const fruits: Record<FruitId, FruitValue> = {
             harvestQuantity: 20,
             availableInShop: false,
             sellable: false,
-            isNFT: true
+            isNFT: true,
+            unlockLevel: 1,
+            description: "An exotic NFT fruit with vibrant pink skin and white flesh. Dragon fruits are rare and valuable, offering higher experience gains. Their unique appearance makes them a prized addition to any farm."
         },
         growthStages: {
             1: {
                 title: "Stage 1",
                 description: "18 hours",
                 imageUrl: "/fruits/dragon-fruit/1.png",
+                className: "scale-40 items-center",
+                containerClassName: "items-center mt-4"
             },
             2: {
                 title: "Stage 2",
@@ -206,7 +220,7 @@ export const fruits: Record<FruitId, FruitValue> = {
             },
             6: {
                 title: "Regrowth",
-                description: "9 hours",
+                description: "18 hours",
                 imageUrl: "/fruits/dragon-fruit/3.png",
             },
         },
@@ -222,7 +236,7 @@ export const fruits: Record<FruitId, FruitValue> = {
     [FruitId.Jackfruit]: {
         id: FruitId.Jackfruit,
         infomation: {
-            price: 5000,
+            imageUrl: envConfig().assetBaseUrl + "/products/jackfruit.png",
             youngGrowthStageDuration: 60 * 60 * 18, // 18 hours
             matureGrowthStageDuration: 60 * 60 * 9, // 9 hours
             fertilizerTime: 60 * 60 * 8, // 8 hour
@@ -231,18 +245,24 @@ export const fruits: Record<FruitId, FruitValue> = {
             harvestQuantity: 20,
             availableInShop: false,
             sellable: false,
-            isNFT: true
+            isNFT: true,
+            unlockLevel: 1,
+            description: "The world's largest tree-borne fruit, jackfruits are impressive NFT specimens. Their massive size and unique texture make them a standout addition to any collection. They offer substantial experience gains for dedicated farmers."
         },
         growthStages: {
             1: {
                 title: "Stage 1",
                 description: "18 hours",
                 imageUrl: "/fruits/jackfruit/1.png",
+                className: "scale-40 items-center",
+                containerClassName: "items-center mt-4"
             },
             2: {
                 title: "Stage 2",
                 description: "18 hours",
                 imageUrl: "/fruits/jackfruit/2.png",
+                className: "scale-80 items-center",
+                containerClassName: "items-center mt-4"
             },
             3: {
                 title: "Stage 3",
@@ -261,7 +281,7 @@ export const fruits: Record<FruitId, FruitValue> = {
             },
             6: {
                 title: "Regrowth",
-                description: "9 hours",
+                description: "18 hours",
                 imageUrl: "/fruits/jackfruit/3.png",
             },
         },
@@ -277,7 +297,7 @@ export const fruits: Record<FruitId, FruitValue> = {
     [FruitId.Rambutan]: {
         id: FruitId.Rambutan,
         infomation: {
-            price: 5000,
+            imageUrl: envConfig().assetBaseUrl + "/products/rambutan.png",
             youngGrowthStageDuration: 60 * 60 * 18, // 18 hours
             matureGrowthStageDuration: 60 * 60 * 9, // 9 hours
             fertilizerTime: 60 * 60 * 8, // 8 hour
@@ -286,18 +306,24 @@ export const fruits: Record<FruitId, FruitValue> = {
             harvestQuantity: 20,
             availableInShop: false,
             sellable: false,
-            isNFT: true
+            isNFT: true,
+            unlockLevel: 1,
+            description: "A tropical NFT fruit with a distinctive hairy appearance. Rambutans are prized for their sweet, juicy flesh and unique look. They're perfect for collectors looking to add exotic variety to their farm."
         },
         growthStages: {
             1: {
                 title: "Stage 1",
                 description: "18 hours",
                 imageUrl: "/fruits/rambutan/1.png",
+                className: "scale-40 items-center",
+                containerClassName: "items-center mt-4"
             },
             2: {
                 title: "Stage 2",
                 description: "18 hours",
                 imageUrl: "/fruits/rambutan/2.png",
+                className: "scale-80 items-center",
+                containerClassName: "items-center mt-4"
             },
             3: {
                 title: "Stage 3",
@@ -316,7 +342,7 @@ export const fruits: Record<FruitId, FruitValue> = {
             },
             6: {
                 title: "Regrowth",
-                description: "9 hours",
+                description: "18 hours",
                 imageUrl: "/fruits/rambutan/3.png",
             },
         },
@@ -332,7 +358,7 @@ export const fruits: Record<FruitId, FruitValue> = {
     [FruitId.Pomegranate]: {
         id: FruitId.Pomegranate,
         infomation: {
-            price: 5000,
+            imageUrl: envConfig().assetBaseUrl + "/products/pomegranate.png",
             youngGrowthStageDuration: 60 * 60 * 18, // 18 hours
             matureGrowthStageDuration: 60 * 60 * 9, // 9 hours
             fertilizerTime: 60 * 60 * 8, // 8 hour
@@ -341,18 +367,24 @@ export const fruits: Record<FruitId, FruitValue> = {
             harvestQuantity: 20,
             availableInShop: false,
             sellable: false,
-            isNFT: true
+            isNFT: true,
+            unlockLevel: 1,
+            description: "An ancient NFT fruit known for its ruby-red seeds. Pomegranates are symbols of abundance and prosperity. Their unique structure and rich history make them a valuable addition to any NFT collection."
         },
         growthStages: {
             1: {
                 title: "Stage 1",
                 description: "18 hours",
                 imageUrl: "/fruits/pomegranate/1.png",
+                className: "scale-40 items-center",
+                containerClassName: "items-center mt-4"
             },
             2: {
                 title: "Stage 2",
                 description: "18 hours",
                 imageUrl: "/fruits/pomegranate/2.png",
+                className: "scale-80 items-center",
+                containerClassName: "items-center mt-4"
             },
             3: {
                 title: "Stage 3",
@@ -371,7 +403,7 @@ export const fruits: Record<FruitId, FruitValue> = {
             },
             6: {
                 title: "Regrowth",
-                description: "9 hours",
+                description: "18 hours",
                 imageUrl: "/fruits/pomegranate/3.png",
             },
         },

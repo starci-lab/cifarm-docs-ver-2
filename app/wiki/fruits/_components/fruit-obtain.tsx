@@ -14,7 +14,6 @@ export const FruitObtain = ({ fruitId }: FruitObtainProps) => {
 
   return (
     <div className="mt-6">
-      <h3 className="text-lg font-semibold mb-4">How to Obtain</h3>
       <div className="space-y-4">
         {Object.entries(obtain).map(([key, data]) => (
           <div key={key} className="bg-blue-100 dark:bg-gray-800 rounded-lg overflow-hidden">
