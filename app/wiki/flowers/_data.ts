@@ -45,6 +45,13 @@ export interface FlowerInfomation {
     honeyQualityChancePlus: number;
     imageUrl: string;
     description: string;
+    seed: {
+        name: string;
+        price: number;
+        imageUrl: string;
+    },
+    basicSellPrice: number;
+    qualitySellPrice: number;
 }
 
 export const flowers: Record<FlowerId, FlowerValue> = {
@@ -61,7 +68,14 @@ export const flowers: Record<FlowerId, FlowerValue> = {
             availableInShop: true,
             honeyYieldCoefficient: 2.5,
             honeyQualityChancePlus: 0,
-            imageUrl: "/products/daisy.png"
+            imageUrl: "/products/daisy.png",
+            basicSellPrice: 3,
+            qualitySellPrice: 6,
+            seed: {
+                name: "Daisy Seed",
+                price: 50,
+                imageUrl: "/shop/flowers/daisy.png"
+            }
         },
         growthStages: {
             1: {
@@ -126,7 +140,14 @@ export const flowers: Record<FlowerId, FlowerValue> = {
             availableInShop: true,
             honeyYieldCoefficient: 5,
             honeyQualityChancePlus: 10,
-            imageUrl: "/products/sunflower.png"
+            imageUrl: "/products/sunflower.png",
+            basicSellPrice: 6,
+            qualitySellPrice: 12,
+            seed: {
+                name: "Sunflower Seed",
+                price: 100,
+                imageUrl: "/shop/flowers/sunflower.png"
+            }
         },
         growthStages: {
             1: {

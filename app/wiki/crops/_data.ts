@@ -35,15 +35,15 @@ export interface CropInformation {
         price: number;
         imageUrl: string;
     },
-    growthStageDuration: number; // seconds
-    unlockLevel: number;
     basicHarvestExperiences: number;
     qualityHarvestExperiences: number; // 2x basicHarvestExperiences
+    growthStageDuration: number; // seconds
+    basicSellPrice: number; // sell price
+    qualitySellPrice: number; // 2x basicSellPrice
+    unlockLevel: number;
     harvestQuantity: number;
     perennialCount: number;
     availableInShop: boolean;
-    basicSellPrice: number; // sell price
-    qualitySellPrice: number; // 2x basicSellPrice
 }
 
 

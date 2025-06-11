@@ -45,12 +45,25 @@ export const FlowerCard = ({ flowerId }: FlowerCardProps) => {
         <div className="col-span-1">
           <div className="grid grid-cols-2">
             <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-              Price
+              Seed
+            </div>
+            <div className="px-4 py-1 text-sm text-blue-600 dark:text-blue-400 flex items-center">
+              <img
+                src={envConfig().assetBaseUrl + infomation.seed.imageUrl}
+                alt={infomation.seed.name}
+                className="w-8 h-8 mr-1"
+              />
+              {infomation.seed.name}
+            </div>
+          </div>
+          <div className="grid grid-cols-2">
+            <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
+              Seed Price
             </div>
             <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
               <span className="ml-1 flex">
                 <Image src="/icons/gold.png" alt="coin" width={20} height={20} className="mr-1" />
-                {"x" + infomation.price}
+                {"x" + infomation.seed.price}
               </span>
             </div>
           </div>
@@ -108,6 +121,17 @@ export const FlowerCard = ({ flowerId }: FlowerCardProps) => {
         rightValue={infomation.qualityHarvestExperiences.toString()}
         leftIcon={<ExpIcon />}
         rightIcon={<ExpIcon />}
+      />
+
+      {/* Market section */}
+      <InformationGrid
+        title="Market"
+        leftTitle="Basic"
+        leftValue={infomation.basicSellPrice.toString()}
+        leftIcon={<GoldIcon />}
+        rightTitle="Quality"
+        rightValue={infomation.qualitySellPrice.toString()}
+        rightIcon={<GoldIcon />}
       />
     </div>
   )
