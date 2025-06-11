@@ -3,8 +3,10 @@ title: 'Potato'
 description: 'The potato is a starchy tuber of the plant Solanum tuberosum and is a root vegetable native to the Americas.'
 ---
 
-import { CropCard, CropGrowthStage } from '../_components'
-import { CropId } from '../_data'
+import { CropCard } from "../_components/crop-card"
+import { CropGrowthStage } from "../_components/crop-growth-stage"
+import { CropObtain } from "../_components/crop-obtain"
+import { CropId } from "../_data"
 
 # Potato
 
@@ -12,4 +14,8 @@ import { CropId } from '../_data'
 
 ## Growth Stages
 
-<CropGrowthStage cropId={CropId.Potato} /> 
+<CropGrowthStage cropId={CropId.Potato} />
+
+## How to obtain
+
+<CropObtain cropId={CropId.Potato} /> 

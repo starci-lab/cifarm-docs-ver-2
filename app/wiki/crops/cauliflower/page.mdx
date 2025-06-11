@@ -3,8 +3,10 @@ title: 'Cauliflower'
 description: 'Cauliflower is one of several vegetables in the species Brassica oleracea in the genus Brassica, which is in the Brassicaceae family.'
 ---
 
-import { CropCard, CropGrowthStage } from '../_components'
-import { CropId } from '../_data'
+import { CropCard } from "../_components/crop-card"
+import { CropGrowthStage } from "../_components/crop-growth-stage"
+import { CropObtain } from "../_components/crop-obtain"
+import { CropId } from "../_data"
 
 # Cauliflower
 
@@ -12,4 +14,8 @@ import { CropId } from '../_data'
 
 ## Growth Stages
 
-<CropGrowthStage cropId={CropId.Cauliflower} /> 
+<CropGrowthStage cropId={CropId.Cauliflower} />
+
+## How to obtain
+
+<CropObtain cropId={CropId.Cauliflower} /> 

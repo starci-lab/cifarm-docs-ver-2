@@ -3,8 +3,10 @@ title: 'Pineapple'
 description: 'The pineapple is a tropical plant with an edible fruit and is the most economically significant plant in the family Bromeliaceae.'
 ---
 
-import { CropCard, CropGrowthStage } from '../_components'
-import { CropId } from '../_data'
+import { CropCard } from "../_components/crop-card"
+import { CropGrowthStage } from "../_components/crop-growth-stage"
+import { CropObtain } from "../_components/crop-obtain"
+import { CropId } from "../_data"
 
 # Pineapple
 
@@ -12,4 +14,8 @@ import { CropId } from '../_data'
 
 ## Growth Stages
 
-<CropGrowthStage cropId={CropId.Pineapple} /> 
+<CropGrowthStage cropId={CropId.Pineapple} />
+
+## How to obtain
+
+<CropObtain cropId={CropId.Pineapple} /> 

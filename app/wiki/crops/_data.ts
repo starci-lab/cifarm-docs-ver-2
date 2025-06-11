@@ -23,6 +23,15 @@ export interface CropValue {
         }
     }
     information: CropInformation;
+    obtain: {
+        [key: number]: {
+            title: string;
+            description: string;
+            price: number;
+            priceIcon: string;
+            icon: string;
+        }
+    }
 }
 
 export interface CropInformation {
@@ -33,7 +42,7 @@ export interface CropInformation {
     seed: {
         name: string;
         price: number;
-        imageUrl: string;
+        imageUrl: string
     },
     basicHarvestExperiences: number;
     qualityHarvestExperiences: number; // 2x basicHarvestExperiences
@@ -96,6 +105,15 @@ export const crops: Record<CropId, CropValue> = {
             basicSellPrice: 4,
             qualitySellPrice: 8,
         },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 50,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
+        },
     },
     [CropId.Carrot]: {
         growthStages: {
@@ -144,6 +162,15 @@ export const crops: Record<CropId, CropValue> = {
             availableInShop: true,
             basicSellPrice: 6,
             qualitySellPrice: 12,
+        },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 50,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
         },
     },
     [CropId.Potato]: {
@@ -194,6 +221,15 @@ export const crops: Record<CropId, CropValue> = {
             basicSellPrice: 11,
             qualitySellPrice: 22,
         },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 100,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
+        },
     },
     [CropId.Pineapple]: {
         growthStages: {
@@ -242,6 +278,15 @@ export const crops: Record<CropId, CropValue> = {
             availableInShop: true,
             basicSellPrice: 13,
             qualitySellPrice: 26,
+        },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 120,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
         },
     },
     [CropId.Watermelon]: {
@@ -292,6 +337,15 @@ export const crops: Record<CropId, CropValue> = {
             basicSellPrice: 15,
             qualitySellPrice: 30,
         },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 120,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
+        },
     },
     [CropId.Cucumber]: {
         growthStages: {
@@ -340,6 +394,15 @@ export const crops: Record<CropId, CropValue> = {
             availableInShop: true,
             basicSellPrice: 17,
             qualitySellPrice: 34,
+        },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 120,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
         },
     },
     [CropId.BellPepper]: {
@@ -395,6 +458,15 @@ export const crops: Record<CropId, CropValue> = {
             basicSellPrice: 12,
             qualitySellPrice: 24,
         },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 150,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
+        },
     },
     [CropId.Strawberry]: {
         growthStages: {
@@ -449,6 +521,15 @@ export const crops: Record<CropId, CropValue> = {
             basicSellPrice: 10,
             qualitySellPrice: 20,
         },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 130,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
+        },
     },
     [CropId.Pumpkin]: {
         growthStages: {
@@ -497,6 +578,15 @@ export const crops: Record<CropId, CropValue> = {
             availableInShop: true,
             basicSellPrice: 20,
             qualitySellPrice: 40,
+        },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 150,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
         },
     },
     [CropId.Cauliflower]: {
@@ -547,6 +637,15 @@ export const crops: Record<CropId, CropValue> = {
             basicSellPrice: 18,
             qualitySellPrice: 36,
         },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 150,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
+        },
     },
     [CropId.Tomato]: {
         growthStages: {
@@ -595,6 +694,15 @@ export const crops: Record<CropId, CropValue> = {
             availableInShop: true,
             basicSellPrice: 14,
             qualitySellPrice: 28,
+        },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 150,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
         },
     },
     [CropId.Eggplant]: {
@@ -645,6 +753,15 @@ export const crops: Record<CropId, CropValue> = {
             basicSellPrice: 16,
             qualitySellPrice: 32,
         },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 150,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
+        },
     },
     [CropId.Pea]: {
         growthStages: {
@@ -693,6 +810,15 @@ export const crops: Record<CropId, CropValue> = {
             availableInShop: true,
             basicSellPrice: 18,
             qualitySellPrice: 36,
+        },
+        obtain: {
+            1: {
+                title: "Shop available",
+                description: "You can buy this crop in the shop - In crop tab",
+                price: 150,
+                priceIcon: "/icons/gold.png",
+                icon: "/icons/shop.png",
+            }
         },
     },
 }

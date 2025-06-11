@@ -3,8 +3,10 @@ title: 'Tomato'
 description: 'The tomato is the edible berry of the plant Solanum lycopersicum, commonly known as the tomato plant.'
 ---
 
-import { CropCard, CropGrowthStage } from '../_components'
-import { CropId } from '../_data'
+import { CropCard } from "../_components/crop-card"
+import { CropGrowthStage } from "../_components/crop-growth-stage"
+import { CropObtain } from "../_components/crop-obtain"
+import { CropId } from "../_data"
 
 # Tomato
 
@@ -12,4 +14,8 @@ import { CropId } from '../_data'
 
 ## Growth Stages
 
-<CropGrowthStage cropId={CropId.Tomato} /> 
+<CropGrowthStage cropId={CropId.Tomato} />
+
+## How to obtain
+
+<CropObtain cropId={CropId.Tomato} /> 

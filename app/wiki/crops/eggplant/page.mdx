@@ -3,8 +3,10 @@ title: 'Eggplant'
 description: 'The eggplant, aubergine, or brinjal is a plant species in the nightshade family Solanaceae.'
 ---
 
-import { CropCard, CropGrowthStage } from '../_components'
-import { CropId } from '../_data'
+import { CropCard } from "../_components/crop-card"
+import { CropGrowthStage } from "../_components/crop-growth-stage"
+import { CropObtain } from "../_components/crop-obtain"
+import { CropId } from "../_data"
 
 # Eggplant
 
@@ -12,4 +14,8 @@ import { CropId } from '../_data'
 
 ## Growth Stages
 
-<CropGrowthStage cropId={CropId.Eggplant} /> 
+<CropGrowthStage cropId={CropId.Eggplant} />
+
+## How to obtain
+
+<CropObtain cropId={CropId.Eggplant} /> 

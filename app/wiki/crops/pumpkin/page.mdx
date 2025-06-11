@@ -3,8 +3,10 @@ title: 'Pumpkin'
 description: 'A pumpkin is a cultivar of winter squash that is round with smooth, slightly ribbed skin, and is most often deep yellow to orange in coloration.'
 ---
 
-import { CropCard, CropGrowthStage } from '../_components'
-import { CropId } from '../_data'
+import { CropCard } from "../_components/crop-card"
+import { CropGrowthStage } from "../_components/crop-growth-stage"
+import { CropObtain } from "../_components/crop-obtain"
+import { CropId } from "../_data"
 
 # Pumpkin
 
@@ -12,4 +14,8 @@ import { CropId } from '../_data'
 
 ## Growth Stages
 
-<CropGrowthStage cropId={CropId.Pumpkin} /> 
+<CropGrowthStage cropId={CropId.Pumpkin} />
+
+## How to obtain
+
+<CropObtain cropId={CropId.Pumpkin} /> 

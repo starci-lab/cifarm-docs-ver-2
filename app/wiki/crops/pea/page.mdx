@@ -3,8 +3,10 @@ title: 'Pea'
 description: 'The pea is most commonly the small spherical seed or the seed-pod of the flowering plant species Pisum sativum.'
 ---
 
-import { CropCard, CropGrowthStage } from '../_components'
-import { CropId } from '../_data'
+import { CropCard } from "../_components/crop-card"
+import { CropGrowthStage } from "../_components/crop-growth-stage"
+import { CropObtain } from "../_components/crop-obtain"
+import { CropId } from "../_data"
 
 # Pea
 
@@ -12,4 +14,8 @@ import { CropId } from '../_data'
 
 ## Growth Stages
 
-<CropGrowthStage cropId={CropId.Pea} /> 
+<CropGrowthStage cropId={CropId.Pea} />
+
+## How to obtain
+
+<CropObtain cropId={CropId.Pea} /> 

@@ -3,8 +3,10 @@ title: 'Strawberry'
 description: 'The strawberry is a widely grown hybrid species of the genus Fragaria, collectively known as the strawberries.'
 ---
 
-import { CropCard, CropGrowthStage } from '../_components'
-import { CropId } from '../_data'
+import { CropCard } from "../_components/crop-card"
+import { CropGrowthStage } from "../_components/crop-growth-stage"
+import { CropObtain } from "../_components/crop-obtain"
+import { CropId } from "../_data"
 
 # Strawberry
 
@@ -12,4 +14,8 @@ import { CropId } from '../_data'
 
 ## Growth Stages
 
-<CropGrowthStage cropId={CropId.Strawberry} /> 
+<CropGrowthStage cropId={CropId.Strawberry} />
+
+## How to obtain
+
+<CropObtain cropId={CropId.Strawberry} /> 

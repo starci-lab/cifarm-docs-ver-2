@@ -3,8 +3,10 @@ title: 'Cucumber'
 description: 'The cucumber is a widely-cultivated creeping vine plant in the Cucurbitaceae family that bears usually cylindrical fruits.'
 ---
 
-import { CropCard, CropGrowthStage } from '../_components'
-import { CropId } from '../_data'
+import { CropCard } from "../_components/crop-card"
+import { CropGrowthStage } from "../_components/crop-growth-stage"
+import { CropObtain } from "../_components/crop-obtain"
+import { CropId } from "../_data"
 
 # Cucumber
 
@@ -12,4 +14,8 @@ import { CropId } from '../_data'
 
 ## Growth Stages
 
-<CropGrowthStage cropId={CropId.Cucumber} /> 
+<CropGrowthStage cropId={CropId.Cucumber} />
+
+## How to obtain
+
+<CropObtain cropId={CropId.Cucumber} /> 

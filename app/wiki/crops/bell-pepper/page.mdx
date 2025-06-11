@@ -3,8 +3,10 @@ title: 'Bell Pepper'
 description: 'The bell pepper is the fruit of plants in the Grossum Group of the species Capsicum annuum.'
 ---
 
-import { CropCard, CropGrowthStage, CropObtain, CropTips } from '../_components'
-import { CropId } from '../_data'
+import { CropCard } from "../_components/crop-card"
+import { CropGrowthStage } from "../_components/crop-growth-stage"
+import { CropObtain } from "../_components/crop-obtain"
+import { CropId } from "../_data"
 
 # Bell Pepper
 
@@ -17,7 +19,3 @@ import { CropId } from '../_data'
 ## How to obtain
 
 <CropObtain cropId={CropId.BellPepper} />
-
-## How to care
-
-<CropTips cropId={CropId.BellPepper} />
