@@ -20,6 +20,10 @@ export interface PetValue {
         type: PetType;
         helpSuccessExperience: number;
         sellable: boolean;
+        size: {
+            x: number;
+            y: number;
+        }
     }
     usage: {
         [key: string]: {
@@ -50,6 +54,10 @@ export const pets: Record<PetId, PetValue> = {
             type: PetType.Dog,
             helpSuccessExperience: 24,
             sellable: true,
+            size: {
+                x: 1,
+                y: 1
+            }
         },
         usage: {
             help: {
@@ -78,6 +86,10 @@ export const pets: Record<PetId, PetValue> = {
             type: PetType.Cat,
             helpSuccessExperience: 24,
             sellable: true,
+            size: {
+                x: 1,
+                y: 1
+            }
         },
         usage: {
             help: {

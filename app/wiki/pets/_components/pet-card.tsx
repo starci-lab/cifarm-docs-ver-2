@@ -88,6 +88,14 @@ export const PetCard = ({ petId }: PetCardProps) => {
                 {information.helpSuccessExperience} <ExpIcon />
               </div>
             </div>
+            <div className="grid grid-cols-2">
+              <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
+                Size
+              </div>
+              <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
+                {information.size.x}x{information.size.y}
+              </div>
+            </div>
           </div>
         </div>
       </div>
