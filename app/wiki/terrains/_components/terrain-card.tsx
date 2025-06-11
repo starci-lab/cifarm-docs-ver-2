@@ -45,20 +45,26 @@ export const TerrainCard = ({ terrainId }: TerrainCardProps) => {
         {/* 2 grid */}
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="col-span-1">
+            <div className="grid grid-cols-2">
+              <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
+                Size
+              </div>
+              <div className="px-4 py-3 text-sm text-gray-700 dark:text-gray-300">
+                {terrain.size.x}x{terrain.size.y}
+              </div>
+            </div>
             {terrain.availableInShop && terrain.price != null && (
-              <>
-                <div className="grid grid-cols-2">
-                  <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
-                    Price
-                  </div>
-                  <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
-                    <span className="ml-1 flex">
-                      <Image src="/icons/gold.png" alt="coin" width={20} height={20} className="mr-1" />
-                      {"x" + terrain.price}
-                    </span>
-                  </div>
+              <div className="grid grid-cols-2">
+                <div className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-700">
+                  Price
                 </div>
-              </>
+                <div className="px-4 py-3 text-sm text-blue-600 dark:text-blue-400">
+                  <span className="ml-1 flex">
+                    <Image src="/icons/gold.png" alt="coin" width={20} height={20} className="mr-1" />
+                    {"x" + terrain.price}
+                  </span>
+                </div>
+              </div>
             )}
           </div>
           <div className="col-span-1">

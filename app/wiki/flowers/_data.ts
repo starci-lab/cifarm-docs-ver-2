@@ -80,23 +80,23 @@ export const flowers: Record<FlowerId, FlowerValue> = {
         growthStages: {
             1: {
                 title: "Stage 1",
-                description: "12 hours",
+                description: "5 minutes",
                 imageUrl: "/flowers/daisy/1.png",
                 className: "scale-50"
             },
             2: {
                 title: "Stage 2",
-                description: "12 hours",
+                description: "5 minutes",
                 imageUrl: "/flowers/daisy/2.png",
             },
             3: {
                 title: "Stage 3",
-                description: "12 hours",
+                description: "5 minutes",
                 imageUrl: "/flowers/daisy/3.png",
             },
             4: {
                 title: "Stage 4",
-                description: "12 hours",
+                description: "5 minutes",
                 imageUrl: "/flowers/daisy/4.png",
             },
             5: {
@@ -152,23 +152,23 @@ export const flowers: Record<FlowerId, FlowerValue> = {
         growthStages: {
             1: {
                 title: "Stage 1",
-                description: "12 hours",
+                description: "72 minutes",
                 imageUrl: "/flowers/sunflower/1.png",
                 className: "scale-50"
             },
             2: {
                 title: "Stage 2",
-                description: "12 hours",
+                description: "72 minutes",
                 imageUrl: "/flowers/sunflower/2.png",
             },
             3: {
                 title: "Stage 3",
-                description: "12 hours",
+                description: "72 minutes",
                 imageUrl: "/flowers/sunflower/3.png",
             },
             4: {
                 title: "Stage 4",
-                description: "12 hours",
+                description: "72 minutes",
                 imageUrl: "/flowers/sunflower/4.png",
             },
             5: {

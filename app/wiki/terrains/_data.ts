@@ -23,6 +23,10 @@ export interface TerrainValue {
     availableInShop: boolean;
     price?: number;
     sellPrice?: number;
+    size: {
+        x: number;
+        y: number;
+    };
 }
 
 export const terrains: Record<TerrainId, TerrainValue> = {
@@ -33,6 +37,10 @@ export const terrains: Record<TerrainId, TerrainValue> = {
         type: TerrainType.GrassPatch,
         sellable: false,
         availableInShop: true,
+        size: {
+            x: 1,
+            y: 1
+        }
     },
     [TerrainId.SmallStone]: {
         name: "Small Stone",
@@ -41,6 +49,10 @@ export const terrains: Record<TerrainId, TerrainValue> = {
         type: TerrainType.Stone,
         sellable: false,
         availableInShop: true,
+        size: {
+            x: 1,
+            y: 1
+        }
     },
     [TerrainId.OakTree]: {
         name: "Oak Tree",
@@ -49,6 +61,10 @@ export const terrains: Record<TerrainId, TerrainValue> = {
         type: TerrainType.OakTree,
         sellable: false,
         availableInShop: true,
+        size: {
+            x: 2,
+            y: 2
+        }
     },
     [TerrainId.PineTree]: {
         name: "Pine Tree",
@@ -57,6 +73,10 @@ export const terrains: Record<TerrainId, TerrainValue> = {
         type: TerrainType.PineTree,
         sellable: true,
         availableInShop: true,
+        size: {
+            x: 2,
+            y: 2
+        }
     },
     [TerrainId.MapleTree]: {
         name: "Maple Tree",
@@ -65,5 +85,9 @@ export const terrains: Record<TerrainId, TerrainValue> = {
         type: TerrainType.MapleTree,
         sellable: true,
         availableInShop: true,
+        size: {
+            x: 2,
+            y: 2
+        }
     },
 } 

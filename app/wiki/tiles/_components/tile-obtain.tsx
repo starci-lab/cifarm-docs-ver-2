@@ -40,7 +40,7 @@ export const TileObtain = ({ tileId }: TileObtainProps) => {
                   height={20}
                   className="mr-1"
                 />
-                ×{tile.price}
+                ×{tile.buyPrice}
               </div>
             </div>
           </div>

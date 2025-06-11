@@ -46,6 +46,7 @@ export interface BuildingValue {
     beeHouseQualityHarvestExperiences?: number;
     baseHoneyYieldCoefficient?: number;
     upgrades?: BuildingUpgrade[];
+    size: string;
 }
 
 export const buildings: Record<BuildingId, BuildingValue> = {

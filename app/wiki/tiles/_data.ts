@@ -7,10 +7,14 @@ export interface TileValue {
     name: string;
     description: string;
     imageUrl: string;
-    price: number;
+    buyPrice: number;
     sellPrice: number;
     sellable: boolean;
     availableInShop: boolean;
+    size: {
+        x: number;
+        y: number;
+    };
 }
 
 export const tiles: Record<TileId, TileValue> = {
@@ -18,9 +22,13 @@ export const tiles: Record<TileId, TileValue> = {
         name: "Basic Tile",
         description: "A basic tile that can be used to build your farm.",
         imageUrl: "/tiles/basic-tile/basic-tile.png",
-        price: 1000,
+        buyPrice: 1000,
         sellPrice: 500,
         sellable: true,
         availableInShop: true,
+        size: {
+            x: 1,
+            y: 1
+        }
     },
 } 
