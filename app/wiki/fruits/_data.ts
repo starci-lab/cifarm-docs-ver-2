@@ -158,11 +158,15 @@ export const fruits: Record<FruitId, FruitValue> = {
                 title: "Stage 1",
                 description: "12 hours",
                 imageUrl: "/fruits/apple/1.png",
+                className: "scale-50 items-center",
+                containerClassName: "items-center mt-4"
             },
             2: {
                 title: "Stage 2",
                 description: "12 hours",
                 imageUrl: "/fruits/apple/2.png",
+                className: "scale-70 items-center",
+                containerClassName: "items-center mt-4"
             },
             3: {
                 title: "Stage 3",
