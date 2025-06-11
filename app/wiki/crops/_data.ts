@@ -20,6 +20,8 @@ export interface CropValue {
             title: string;
             description: string;
             imageUrl: string;
+            className?: string;
+            containerClassName?: string;
         }
     }
     information: CropInformation;
@@ -63,11 +65,14 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "4 minutes",
                 imageUrl: "/crops/turnip/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "4 minutes",
                 imageUrl: "/crops/turnip/2.png",
+                className: "scale-50",
+                containerClassName: "mt-2"
             },
             3: {
                 title: "Stage 3",
@@ -121,11 +126,13 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "10 minutes",
                 imageUrl: "/crops/carrot/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "10 minutes",
                 imageUrl: "/crops/carrot/2.png",
+                className: "scale-70"
             },
             3: {
                 title: "Stage 3",
@@ -179,11 +186,13 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "15 minutes",
                 imageUrl: "/crops/potato/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "15 minutes",
                 imageUrl: "/crops/potato/2.png",
+                className: "scale-70 mt-2"
             },
             3: {
                 title: "Stage 3",
@@ -237,11 +246,13 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "20 minutes",
                 imageUrl: "/crops/pineapple/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "20 minutes",
                 imageUrl: "/crops/pineapple/2.png",
+                className: "scale-80 "
             },
             3: {
                 title: "Stage 3",
@@ -295,11 +306,14 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "25 minutes",
                 imageUrl: "/crops/watermelon/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "25 minutes",
                 imageUrl: "/crops/watermelon/2.png",
+                className: "scale-70",
+                containerClassName: "mt-2"
             },
             3: {
                 title: "Stage 3",
@@ -353,11 +367,14 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "33.33 minutes",
                 imageUrl: "/crops/cucumber/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "33.33 minutes",
                 imageUrl: "/crops/cucumber/2.png",
+                className: "scale-70",
+                containerClassName: "mt-2"
             },
             3: {
                 title: "Stage 3",
@@ -411,11 +428,13 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "20 minutes",
                 imageUrl: "/crops/bell-pepper/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "20 minutes",
                 imageUrl: "/crops/bell-pepper/2.png",
+                className: "scale-70"
             },
             3: {
                 title: "Stage 3",
@@ -474,11 +493,14 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "26.67 minutes",
                 imageUrl: "/crops/strawberry/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "26.67 minutes",
                 imageUrl: "/crops/strawberry/2.png",
+                className: "scale-70",
+                containerClassName: "mt-4"
             },
             3: {
                 title: "Stage 3",
@@ -537,11 +559,14 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "50 minutes",
                 imageUrl: "/crops/pumpkin/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "50 minutes",
                 imageUrl: "/crops/pumpkin/2.png",
+                className: "scale-60",
+                containerClassName: "mt-4"
             },
             3: {
                 title: "Stage 3",
@@ -595,6 +620,7 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "53.33 minutes",
                 imageUrl: "/crops/cauliflower/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
@@ -653,11 +679,13 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "80 minutes",
                 imageUrl: "/crops/tomato/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "80 minutes",
                 imageUrl: "/crops/tomato/2.png",
+                className: "scale-70",
             },
             3: {
                 title: "Stage 3",
@@ -711,11 +739,13 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "100 minutes",
                 imageUrl: "/crops/eggplant/1.png",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "100 minutes",
                 imageUrl: "/crops/eggplant/2.png",
+
             },
             3: {
                 title: "Stage 3",
@@ -769,26 +799,34 @@ export const crops: Record<CropId, CropValue> = {
                 title: "Stage 1",
                 description: "120 minutes",
                 imageUrl: "/crops/pea/1.png",
+                containerClassName: "h-32",
+                className: "scale-50"
             },
             2: {
                 title: "Stage 2",
                 description: "120 minutes",
                 imageUrl: "/crops/pea/2.png",
+                containerClassName: "h-32",
+                className: "scale-80 mt-2"
+
             },
             3: {
                 title: "Stage 3",
                 description: "120 minutes",
                 imageUrl: "/crops/pea/3.png",
+                containerClassName: "h-32",
             },
             4: {
                 title: "Stage 4",
                 description: "120 minutes",
                 imageUrl: "/crops/pea/4.png",
+                containerClassName: "h-32",
             },
             5: {
                 title: "Stage 5",
                 description: "Harvest time",
                 imageUrl: "/crops/pea/5.png",
+                containerClassName: "h-32",
             },
         },
         information: {

@@ -27,13 +27,16 @@ export const CropGrowthStage = ({ cropId }: CropGrowthStageProps) => {
             <tr className="border-t border-gray-200 dark:border-gray-600">
               {Object.entries(growthStages).map(([stage, data]) => (
                 <td key={stage} className="px-4 py-3 text-center place-items-center">
-                 <div className="w-16 h-20 flex items-end justify-center">
+                 <div className={cn(
+                      "w-16 h-20 flex items-end justify-center",
+                      data.containerClassName
+                    )}>
                     <img
                       src={envConfig().assetBaseUrl + data.imageUrl}
                       alt={`${data.title} stage`}
                       className={
                         cn("w-fit h-fit object-contain mx-auto",
-                          stage == "1" || stage == "2" ? "scale-75" : ""
+                          data.className
                         )
                       }
                     />
