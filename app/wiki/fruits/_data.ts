@@ -219,13 +219,15 @@ export const fruits: Record<FruitId, FruitValue> = {
                 title: "Stage 1",
                 description: "18 hours",
                 imageUrl: "/fruits/dragon-fruit/1.png",
-                className: "scale-40 items-center",
-                containerClassName: "items-center mt-4"
+                className: "scale-30 items-center",
+                containerClassName: "items-center mt-6"
             },
             2: {
                 title: "Stage 2",
                 description: "18 hours",
                 imageUrl: "/fruits/dragon-fruit/2.png",
+                className: "scale-70 items-center",
+                containerClassName: "mt-4"
             },
             3: {
                 title: "Stage 3",
@@ -311,7 +313,7 @@ export const fruits: Record<FruitId, FruitValue> = {
                 title: "Stage 2",
                 description: "18 hours",
                 imageUrl: "/fruits/jackfruit/2.png",
-                className: "scale-80 items-center",
+                className: "scale-70 items-center",
                 containerClassName: "items-center mt-4"
             },
             3: {
@@ -392,7 +394,7 @@ export const fruits: Record<FruitId, FruitValue> = {
                 title: "Stage 1",
                 description: "18 hours",
                 imageUrl: "/fruits/rambutan/1.png",
-                className: "scale-40 items-center",
+                className: "scale-30 items-center",
                 containerClassName: "items-center mt-4"
             },
             2: {
