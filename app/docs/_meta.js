@@ -5,9 +5,6 @@ export default {
     "player-guides": {
       title: 'Player Guides'
     },
-    "economy": {
-      title: 'Economy'
-    },
     "act": {
       title: 'Act 🔥'
     },
