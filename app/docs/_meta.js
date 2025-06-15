@@ -5,7 +5,7 @@ export default {
     "player-guides": {
       title: 'Player Guides'
     },
-    "act": {
-      title: 'Act 🔥'
+    "season": {
+      title: 'Season 🔥'
     },
   }

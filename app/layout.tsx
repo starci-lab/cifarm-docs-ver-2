@@ -7,6 +7,7 @@ import './globals.css'
 import { Metadata } from 'next'
 import cn from 'clsx'
 import { TOC } from '@/components/toc'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   description: 'Cifarm is farm thief earn game',
@@ -43,9 +44,9 @@ export const metadata: Metadata = {
  
 const banner = (
   <Banner storageKey="2.0-release">
-    <a href="https://cifarm.xyz" target="_blank">
-      🎉 Cifarm testnet is released. Read more →
-    </a>
+    <Link href="/docs/act/act-1">
+      🎉 Cifarm season 1 is released. Read more →
+    </Link>
   </Banner>
 
 )
