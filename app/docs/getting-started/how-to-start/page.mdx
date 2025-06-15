@@ -42,22 +42,10 @@ After signing in, you have two options:
 
 Now that you're in the game, you can:
 
-<Cards>
-  <Cards.Card
-    icon={"🌱"}
-    title="Growing Crops"
-    href="/docs/player-guides/growing-crops"
-  />
-  <Cards.Card
-    icon={"🪬"}
-    title="Thieving"
-    href="/docs/player-guides/thieving"
-  />
-  <Cards.Card
-    icon={"💰"}
-    title="Earning"
-    href="/docs/player-guides/earning"
-  />
-</Cards>
+import { OverviewPage } from '../../../_components/overview-page'
 
-Check out our [Player Guides](/docs/player-guides/growing-crops) for detailed information about gameplay mechanics. 
+<OverviewPage
+  filePath={"/docs/player-guides"}
+/>
+
+Check out our [Player Guides](/docs/player-guides) for detailed information about gameplay mechanics. 

@@ -11,6 +11,7 @@ export const OverviewPage: FC<{
 }> = async ({ filePath, icons, pageMap: $pageMap }) => {
   const { h2: H2 } = getMDXComponents()
   const currentRoute = filePath.replace('app', '').replace('/page.mdx', '')
+  console.log(currentRoute)
   const pageMap = $pageMap ?? (await getPageMap(currentRoute))
 
   return getIndexPageMap(pageMap).map((pageItem, index) => {

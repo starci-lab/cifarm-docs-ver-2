@@ -8,9 +8,6 @@ export default {
     "growing-fruits": {
       title: '🍎 Growing Fruits'
     },
-    "community": {
-      title: '👥 Community'
-    },
     "pets-animals": {
       title: '🐮 Pets & Animals'
     },
