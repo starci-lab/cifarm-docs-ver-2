@@ -1,3 +1,5 @@
+import { Size } from "@/types";
+
 export enum BuildingId {
     Home = "home",
     Coop = "coop",
@@ -46,7 +48,7 @@ export interface BuildingValue {
     beeHouseQualityHarvestExperiences?: number;
     baseHoneyYieldCoefficient?: number;
     upgrades?: BuildingUpgrade[];
-    size: string;
+    size: Size
 }
 
 export const buildings: Record<BuildingId, BuildingValue> = {
@@ -61,6 +63,10 @@ export const buildings: Record<BuildingId, BuildingValue> = {
         maxUpgrade: 0,
         unlockLevel: 0,
         maxOwnership: 1,
+        size: {
+            x: 1,
+            y: 1
+        },
     },
     [BuildingId.Coop]: {
         name: "Coop",
@@ -76,6 +82,10 @@ export const buildings: Record<BuildingId, BuildingValue> = {
         maxOwnership: 3,
         sellable: true,
         animalContainedType: AnimalType.Poultry,
+        size: {
+            x: 1,
+            y: 1
+        },
         upgrades: [
             {
                 capacity: 2,
@@ -107,6 +117,10 @@ export const buildings: Record<BuildingId, BuildingValue> = {
         maxOwnership: 3,
         sellable: true,
         animalContainedType: AnimalType.Livestock,
+        size: {
+            x: 1,
+            y: 1
+        },
         upgrades: [
             {
                 capacity: 2,
@@ -141,6 +155,10 @@ export const buildings: Record<BuildingId, BuildingValue> = {
         beeHouseBasicHarvestExperiences: 10,
         beeHouseQualityHarvestExperiences: 15,
         baseHoneyYieldCoefficient: 10,
+        size: {
+            x: 1,
+            y: 1
+        },
         upgrades: [
             {
                 capacity: 3,
@@ -172,6 +190,10 @@ export const buildings: Record<BuildingId, BuildingValue> = {
         maxUpgrade: 3,
         unlockLevel: 10,
         maxOwnership: 1,
+        size: {
+            x: 1,
+            y: 1
+        },
         upgrades: [
             {
                 capacity: 3,
@@ -202,6 +224,10 @@ export const buildings: Record<BuildingId, BuildingValue> = {
         unlockLevel: 10,
         maxOwnership: 3,
         sellable: true,
+        size: {
+            x: 1,
+            y: 1
+        },
         upgrades: [
             {
                 capacity: 3,
